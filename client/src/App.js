@@ -1,20 +1,43 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { Button } from 'react-bootstrap';
+import NavBar from './components/nav/NavBar'
 
 class App extends Component {
   render() {
+    const navLinks = [
+      {
+        title: "Home",
+        href: "/"
+      },
+      {
+        title: "Music",
+        href: "/music"
+      },
+      {
+        title: "Videos",
+        href: "/videos"
+      },
+      {
+        title: "Store",
+        href: "/store"
+      },
+      {
+        title: "News",
+        href: "/news"
+      },
+      {
+        title: "About",
+        href: "/about"
+      },
+      {
+        title: "Contact",
+        href: "/contact"
+      },
+    ];
     return (
       <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-        <Button > Hello </Button>
+        <NavBar bgColor="red" titleColor="white" linkColor="yellow" navData={navLinks}/>
       </div>
     );
   }
